@@ -35,17 +35,6 @@ export default function Navbar() {
             <Bars2Icon className="w-6 h-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <NavLink
-              key={item.name}
-              to={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              {item.name}
-            </NavLink>
-          ))}
-        </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <NavLink
             to="/create"
