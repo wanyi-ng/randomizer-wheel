@@ -62,6 +62,11 @@ export default function AddWheel() {
                 id='option'
                 value={optionInput}
                 onChange={(e) => setOptionInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleAddOption()
+                  }
+                }}
               />
               <button
                 className='flex items-center rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold  text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  focus-visible:outline-indigo-600'
@@ -74,7 +79,7 @@ export default function AddWheel() {
             {options.length > 0 && (
               <div className=' text-gray-500'>
                 <h2 className="text-violet11 font-semibold mb-2">Options:</h2>
-                <ul className='space-y-2'>
+                <ul className='max-h-48 overflow-auto space-y-2'>
                   {options.map((option, index) => (
                     <li key={index} className='flex items-center justify-between'>
                       <p >{option}</p>
