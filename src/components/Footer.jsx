@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
         <p className="text-white text-center xl:text-left">
           &copy; 2023 Randomizer Wheel.
         </p>
-        <Link to="https://github.com/wanyi-ng" className="underline">
+        <NavLink to="https://github.com/wanyi-ng" className="underline">
           Github
-        </Link>
+        </NavLink>
       </div>
     </footer>
   );
