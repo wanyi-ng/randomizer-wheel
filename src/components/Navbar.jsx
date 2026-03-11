@@ -6,7 +6,8 @@ import Logo from "../atoms/Logo";
 
 const navigation = [
   { name: "Features", href: "/#features" },
-  { name: "About", href: "/about" },
+  { name: "Github", href: "https://github.com/wanyi-ng" },
+  // { name: "About", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -48,7 +49,9 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <NavLink
             to="/create"
-            className="text-sm font-semibold leading-6 text-gray-900"
+              className={({ isActive }) =>
+                isActive ? "hidden" : "text-sm font-semibold leading-6 text-gray-900"
+              }
           >
             Start Randomizing <span aria-hidden="true">&rarr;</span>
           </NavLink>
@@ -104,13 +107,5 @@ export default function Navbar() {
         </Dialog.Panel>
       </Dialog>
     </header>
-    // <nav className='flex justify-between'>
-    //   <div>
-    //     <h2>Wheel</h2>
-    //   </div>
-    //   <div className='w-4 h-6 cursor-pointer'>
-    //     <EllipsisHorizontalCircleIcon />
-    //   </div>
-    // </nav>
   );
 }
