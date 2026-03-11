@@ -3,15 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import Landing from './pages/Landing'
 import CreateWheel from './pages/CreateWheel'
-
-import TermsAndConditions from './pages/TermsAndConditions'
 import Error404 from './pages/Error404'
-
-// import Test from './pages/Test'
-// import Login from './pages/Login'
-// import Signup from './pages/Signup'
-// import ContactSupport from './pages/ContactSupport'
-// import PrivacyPolicy from './pages/PrivacyPolicy'
 
 export default function AppRoutes() {
   return (
@@ -19,16 +11,7 @@ export default function AppRoutes() {
       <Route path='/' element={<Landing/>} />
       <Route path='/create' element={<CreateWheel />} />
 
-      <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
-
       <Route path='*' element={<Error404/>} />
-
-      {/* <Route path='/signup' element={<Signup/>} /> */}
-      {/* <Route path='/login' element={<Login/>} /> */}
-      {/* <Route path='/support' element={<ContactSupport/>} /> */}
-      {/* <Route path='/privacy-policy' element={<PrivacyPolicy/>} /> */}
-      {/* <Route path='/test' element={<Test/>} /> */}
-
     </Routes>
   )
 }
