@@ -22,9 +22,6 @@ export default function Wheel({ wheel }) {
       whileHover={{ scale: 1.05 }}
     >
       <div className="card w-96 bg-base-100 shadow-xl h-max drop-shadow-md">
-        {/* <figure>
-          <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
-        </figure> */}
         <div className="card-body flex flex-col justify-between space-y-8 divide-y divide-gray-500">
           <div className='space-y-6 divide-y divide-gray-500'>
             <div className='flex justify-between'>
@@ -34,12 +31,11 @@ export default function Wheel({ wheel }) {
                 <button className='btn btn-accent text-accent-content' type='button' aria-label='Delete wheel' onClick={handleDeleteWheel}>
                   <span className='inline-flex justify-center items-center'>
                     <TrashIcon className='w-5 h-5' />
-                    {/* Delete */}
                   </span>
                 </button>
               </div>
             </div>
-            <ul className='pt-6'>
+            <ul className='max-h-96 overflow-auto pt-6'>
               {wheel.options.map((option, index) => (
                 <li key={`${index}-${wheel.id}`}>{option}</li>
               ))}
